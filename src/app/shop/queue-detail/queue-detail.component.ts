@@ -8,14 +8,14 @@ import { ModalController } from '@ionic/angular';
 })
 export class QueueDetailComponent implements OnInit {
 
-  @Input() shopData: any;
+  @Input() queueDetail: any;
 
   constructor(
     public modalController: ModalController
   ) { }
 
   ngOnInit() {
-    // console.log(this.shopData);
+    // console.log(this.queueDetail);
   }
 
   dismiss() {

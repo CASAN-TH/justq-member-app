@@ -15,9 +15,10 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item lines="none" class="thumbnail-size" (click)="openModal(item._id)">
-          <ion-thumbnail slot="start" class="thumbnail-image">
+          <img class="thumbnail-image" src="https://eskimo-studio.com/wp-content/uploads/2017/09/logo-14.jpg">
+          <!-- <ion-thumbnail slot="start" class="thumbnail-image">
             <img src="https://eskimo-studio.com/wp-content/uploads/2017/09/logo-14.jpg">
-          </ion-thumbnail>
+          </ion-thumbnail> -->
           <ion-label class="thumbnail-label">
             <h1>{{item.name}}</h1>
             <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
@@ -27,22 +28,6 @@
           </ion-label>
         </ion-item>
       </ion-grid>
-
-      <!-- <ion-card class="cardShop">
-        <ion-item lines="none" class="thumbnail-size">
-          <ion-thumbnail slot="start" class="thumbnail-image">
-            <img src="https://cheechongruay.smartsme.co.th/media/Epr0MUR9gUP193WFicRqXXtXOA01IAylptAwh5ZdBq.jpg">
-          </ion-thumbnail>
-          <ion-label class="thumbnail-label">
-            <h1>{{item.name}}</h1>
-            <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
-            <span>
-                กรุงเทพ
-            </span>
-          </ion-label>
-        </ion-item>
-      </ion-card> -->
-
     </ion-col>
   </ion-row>
 

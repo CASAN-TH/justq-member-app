@@ -45,7 +45,7 @@ export class ShopPage implements OnInit {
     const modal = await this.modalController.create({
       component: QueueDetailComponent,
       componentProps: {
-        shopData: res
+        queueDetail: res
       }
     });
     return await modal.present();
