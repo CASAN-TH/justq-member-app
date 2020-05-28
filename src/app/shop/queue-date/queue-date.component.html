@@ -1,3 +1,12 @@
-<p>
-  queue-date works!
-</p>
+<ion-content overflow-scroll="true">
+  <ion-row *ngFor="let item of arr; let i = index">
+    <ion-col size="12">
+      <ion-card class="card-space" [ngClass]="{'select-date': i === selected}" (click)="selectDate(i)">
+        <ion-card-content>
+          <div style="font-size: 18px;">{{date | moment: i}}</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-button class="btn-size" expand="full">ต่อไป</ion-button>
+</ion-content>
