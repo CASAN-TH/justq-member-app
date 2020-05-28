@@ -9,11 +9,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { QueueDetailComponent } from './shop/queue-detail/queue-detail.component';
+import { QueueDateComponent } from './shop/queue-date/queue-date.component';
+import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    QueueDetailComponent,
+    QueueDateComponent,
+    QueueTimeComponent
+  ],
+  entryComponents: [
+    QueueDetailComponent,
+    QueueDateComponent,
+    QueueTimeComponent
+  ],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    HttpClientModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

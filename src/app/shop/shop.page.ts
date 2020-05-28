@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from "@angular/common";
 import { ShopService } from '../services/shop.service';
 import { ActivatedRoute } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { QueueDetailComponent } from './queue-detail/queue-detail.component';
+import { QueueDateComponent } from './queue-date/queue-date.component';
+import { QueueTimeComponent } from './queue-time/queue-time.component';
 
 @Component({
   selector: 'app-shop',
@@ -15,7 +19,8 @@ export class ShopPage implements OnInit {
   constructor(
     private _location: Location,
     private shopService: ShopService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public modalController: ModalController
   ) { }
 
   ngOnInit() {
@@ -23,7 +28,7 @@ export class ShopPage implements OnInit {
     let shopType = this.route.snapshot.params.id;
 
     this.shopService.getShopByType(shopType).then((res: any) => {
-      console.log(res);
+      // console.log(res);
       this.shopData = res.data;
     })
 
@@ -33,8 +38,23 @@ export class ShopPage implements OnInit {
     this._location.back();
   }
 
-  shopQue() {
-    console.log("shopQue");
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: QueueDetailComponent,
+    });
+    return await modal.present();
+
+    // // const modal = await this.modalController.create({
+    // //   component: QueueDateComponent,
+    // // });
+    // // return await modal.present();
+
+    // const modal = await this.modalController.create({
+    //   component: QueueTimeComponent,
+    // });
+    // return await modal.present();
   }
+
 
 }
