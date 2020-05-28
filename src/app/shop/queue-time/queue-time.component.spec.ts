@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ModelCreatequeqComponent } from './model-createqueq.component';
+import { QueueTimeComponent } from './queue-time.component';
 
-describe('ModelCreatequeqComponent', () => {
-  let component: ModelCreatequeqComponent;
-  let fixture: ComponentFixture<ModelCreatequeqComponent>;
+describe('QueueTimeComponent', () => {
+  let component: QueueTimeComponent;
+  let fixture: ComponentFixture<QueueTimeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModelCreatequeqComponent ],
+      declarations: [ QueueTimeComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModelCreatequeqComponent);
+    fixture = TestBed.createComponent(QueueTimeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
