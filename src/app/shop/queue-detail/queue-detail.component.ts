@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-queue-detail',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueueDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() shopData: any;
 
-  ngOnInit() {}
+  constructor(
+    public modalController: ModalController
+  ) { }
+
+  ngOnInit() {
+    // console.log(this.shopData);
+  }
+
+  dismiss() {
+    this.modalController.dismiss();
+  }
 
 }
