@@ -14,19 +14,20 @@
     </ion-col>
   </ion-row>
 
+<ion-row>
+  <ion-col size="6" *ngFor="let type of mockdata">
+    <ion-card class="ion-text-center card-margin">  
+      <ion-card-content>
+       <img class="type-logo" [src]="type.typeimg">
+        <h2>{{type.shoptype}}</h2>
+      </ion-card-content>
+    </ion-card>
+    
+  </ion-col>
 
-  <ion-row>
-    <ion-col size="6" *ngFor="let type of mockdata">
-      <ion-grid class="ion-text-center">
-        <img class="type-logo" [src]="type.typeimg">
-        <h4 class="txt-type-margin">{{type.shoptype}}</h4>
-      </ion-grid>
-    </ion-col>
-
-  </ion-row>
+</ion-row>
 
 
-
-
+  
 
 </ion-content>

@@ -1,14 +1,11 @@
 .card-margin{
     margin-right: 5px;
     margin-left: 5px;
+    margin-bottom: -16px;
 }
 
 .txt-margin{
-    margin-bottom: -10px;
-}
-
-.txt-type-margin{
-    margin-top: 5px;
+    margin-bottom: -20px;
 }
 
 .type-logo{
@@ -16,15 +13,3 @@
     height: 85px;
 }
 
-ion-grid {
-    margin-top: 0.5rem;
-    background-color: white;
-    width: 195px;
-    height: 130px;
-    border-radius: 17px;
-    box-shadow: 1px 5px #c3c3c3;
-  }
-  ion-content {
-    --padding-top: -100px !important;
-    --background: rgb(241, 235, 235) !important;
-  }
