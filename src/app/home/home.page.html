@@ -15,11 +15,11 @@
   </ion-row>
 
 <ion-row>
-  <ion-col size="6" *ngFor="let type of mockdata">
-    <ion-card class="ion-text-center card-margin">  
+  <ion-col size="6" *ngFor="let type of shopTypeData">
+    <ion-card class="ion-text-center card-margin" (click)="goToShopByType(type.shoptype)">  
       <ion-card-content>
-       <img class="type-logo" [src]="type.typeimg">
-        <h2>{{type.shoptype}}</h2>
+       <img class="type-logo" [src]="type.shopTypeImg">
+        <h2>{{type.shopTypeName}}</h2>
       </ion-card-content>
     </ion-card>
     
