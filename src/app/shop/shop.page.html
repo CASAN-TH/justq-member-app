@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>shop</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row *ngFor="let item of shopData">
+    <ion-col size="12">
+      <ion-card class="cardShop">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="https://cheechongruay.smartsme.co.th/media/Epr0MUR9gUP193WFicRqXXtXOA01IAylptAwh5ZdBq.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{item.name}}</h3>
+            <p>dolor sit amet</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>
