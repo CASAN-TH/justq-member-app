@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://justq-api-gateway-q2qr5uu5pq-de.a.run.app'
 };
 
 /*

@@ -7,6 +7,10 @@
     margin-bottom: -10px;
 }
 
+.txt-type-margin{
+    margin-top: 5px;
+}
+
 .type-logo{
     width: 95px;
     height: 85px;
@@ -15,9 +19,10 @@
 ion-grid {
     margin-top: 0.5rem;
     background-color: white;
-    width: 185px;
+    width: 195px;
     height: 130px;
     border-radius: 17px;
+    box-shadow: 1px 5px #c3c3c3;
   }
   ion-content {
     --padding-top: -100px !important;
