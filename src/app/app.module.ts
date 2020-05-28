@@ -1,3 +1,4 @@
+import { MomentPipe } from './pipe/moment.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -18,7 +19,8 @@ import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
     AppComponent,
     QueueDetailComponent,
     QueueDateComponent,
-    QueueTimeComponent
+    QueueTimeComponent,
+    MomentPipe
   ],
   entryComponents: [
     QueueDetailComponent,
@@ -26,9 +28,9 @@ import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
     QueueTimeComponent
   ],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule, 
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
     HttpClientModule
   ],
   providers: [
@@ -38,4 +40,4 @@ import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
