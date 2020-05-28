@@ -41,9 +41,12 @@ export class ShopPage implements OnInit {
 
   async openModal(id) {
     const res = await this.shopService.getShopById(id);
-    console.log(res);
+    // console.log(res);
     const modal = await this.modalController.create({
       component: QueueDetailComponent,
+      componentProps: {
+        shopData: res
+      }
     });
     return await modal.present();
 
