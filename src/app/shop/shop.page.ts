@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from "@angular/common";
+import { ShopService } from '../services/shop.service';
 
 @Component({
   selector: 'app-shop',
@@ -9,11 +10,14 @@ import { Location } from "@angular/common";
 export class ShopPage implements OnInit {
 
   shopData: any;
-
-  constructor(private _location: Location) { }
+  shopType: any;
+  constructor(private _location: Location, private shopService: ShopService) { }
 
   ngOnInit() {
     // console.log(this.shopData);
+    this.shopService.getShopByType(this.shopType).then((res: any) => {
+      console.log(res);
+    })
 
     this.shopData = [
       {
