@@ -4,5 +4,22 @@
 }
 
 .txt-margin{
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
+
+.type-logo{
+    width: 95px;
+    height: 85px;
+}
+
+ion-grid {
+    margin-top: 0.5rem;
+    background-color: white;
+    width: 185px;
+    height: 130px;
+    border-radius: 17px;
+  }
+  ion-content {
+    --padding-top: -100px !important;
+    --background: rgb(241, 235, 235) !important;
+  }
