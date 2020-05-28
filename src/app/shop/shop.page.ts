@@ -115,6 +115,692 @@ export class ShopPage implements OnInit {
         }
       },
       {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
+        "_id": "5ecf026625d76c000f1c0068",
+        "name": "ร้านดี",
+        "shoptype": "2",
+        "openhours": [
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973a",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819739",
+            "seq": 1,
+            "dayofweek": "จันทร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973c",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973b",
+            "seq": 2,
+            "dayofweek": "อังคาร"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f81973e",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973d",
+            "seq": 3,
+            "dayofweek": "พุธ"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819740",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f81973f",
+            "seq": 4,
+            "dayofweek": "พฤหัสบดี"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819742",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819741",
+            "seq": 5,
+            "dayofweek": "ศุกร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819744",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819743",
+            "seq": 6,
+            "dayofweek": "เสาร์"
+          },
+          {
+            "opentime": [
+              {
+                "_id": "5ecf192aae8a92000f819746",
+                "start": "08:30",
+                "end": "18:00"
+              }
+            ],
+            "_id": "5ecf192aae8a92000f819745",
+            "seq": 7,
+            "dayofweek": "อาทิตย์"
+          }
+        ],
+        "created": "2020-05-28T00:14:30.426Z",
+        "__v": 3,
+        "updated": "2020-05-28T01:52:57.514Z",
+        "location": {
+          "lat": 13.940773,
+          "lng": 100.71563809999999
+        }
+      },
+      {
         "_id": "5ecf1da3ae8a92000f819763",
         "name": "ร้านสวย",
         "shoptype": "2",
@@ -243,6 +929,10 @@ export class ShopPage implements OnInit {
 
   goBackClick() {
     this._location.back();
+  }
+
+  shopQue() {
+    console.log("shopQue");
   }
 
 }

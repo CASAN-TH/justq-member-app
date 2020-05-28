@@ -11,19 +11,40 @@
 
 <ion-content>
 
+  <!-- <ion-buttons (click)="shopQue()" class="btn-center">
+    <ion-button class="btn-color btn-background">ร้านที่จองได้</ion-button>
+  </ion-buttons> -->
+
   <ion-row *ngFor="let item of shopData">
     <ion-col size="12">
-      <ion-card class="cardShop">
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
+      <ion-grid>
+        <ion-item lines="none" class="thumbnail-size">
+          <ion-thumbnail slot="start" class="thumbnail-image">
             <img src="https://cheechongruay.smartsme.co.th/media/Epr0MUR9gUP193WFicRqXXtXOA01IAylptAwh5ZdBq.jpg">
           </ion-thumbnail>
-          <ion-label>
-            <h3>{{item.name}}</h3>
-            <p>dolor sit amet</p>
+          <ion-label class="thumbnail-label">
+            <h1>{{item.name}}</h1>
+            <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
+            <span>
+                กรุงเทพ
+            </span>
           </ion-label>
         </ion-item>
-      </ion-card>
+      </ion-grid>
+      <!-- <ion-card class="cardShop">
+        <ion-item lines="none" class="thumbnail-size">
+          <ion-thumbnail slot="start" class="thumbnail-image">
+            <img src="https://cheechongruay.smartsme.co.th/media/Epr0MUR9gUP193WFicRqXXtXOA01IAylptAwh5ZdBq.jpg">
+          </ion-thumbnail>
+          <ion-label class="thumbnail-label">
+            <h1>{{item.name}}</h1>
+            <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
+            <span>
+                กรุงเทพ
+            </span>
+          </ion-label>
+        </ion-item>
+      </ion-card> -->
 
 
     </ion-col>
