@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueueDateComponent implements OnInit {
 
+  arr = [];
+  date: any;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.arr.length = 30;
+
+    this.date = new Date();
+  }
+
+  selectDate() {
+    console.log('ddddd')
+  }
 
 }
