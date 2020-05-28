@@ -1,0 +1,30 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "shopType": "1",
+            "shopTypeName": "ร้านเสริมสวย",
+            "shopTypeImg": "https://i.pinimg.com/564x/93/ae/d9/93aed90cbda074340aa497a188390511.jpg"
+        },
+        {
+            "shopType": "2",
+            "shopTypeName": "ร้านกาแฟ",
+            "shopTypeImg": "https://image.shutterstock.com/image-vector/cafe-logo-coffe-vector-illustration-260nw-1021951228.jpg"
+        },
+        {
+            "shopType": "3",
+            "shopTypeName": "ฟิตเนส",
+            "shopTypeImg": "https://image.freepik.com/free-vector/flat-design-fitness-logo-template_23-2148230417.jpg"
+        },
+        {
+            "shopType": "4",
+            "shopTypeName": "สนามกอล์ฟ",
+            "shopTypeImg": "https://en.pimg.jp/039/090/406/1/39090406.jpg"
+        },
+        {
+            "shopType": "5",
+            "shopTypeName": "ร้านสัตว์เลี้ยง",
+            "shopTypeImg": "https://i.pinimg.com/originals/a6/10/23/a61023ac074c4f267b943d7c53e0ca1a.jpg"
+        }
+    ]
+}
