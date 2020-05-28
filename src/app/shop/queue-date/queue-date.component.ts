@@ -10,6 +10,8 @@ export class QueueDateComponent implements OnInit {
   arr = [];
   date: any;
 
+  selected: any;
+
   constructor() { }
 
   ngOnInit() {
@@ -18,8 +20,8 @@ export class QueueDateComponent implements OnInit {
     this.date = new Date();
   }
 
-  selectDate() {
-    console.log('ddddd')
+  selectDate(i) {
+    this.selected = i;
   }
 
 }
