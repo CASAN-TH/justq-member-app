@@ -1,11 +1,4 @@
-.cardShop{
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
+
 .thumbnail-size {
     height: 115px;
 }
@@ -16,6 +9,7 @@
 .thumbnail-label {
     padding-bottom: 30px;
     margin-top: 0px;
+    padding-left: 10px;
 }
 .icon-image {
     height: 20px;
@@ -25,15 +19,14 @@
 ion-grid {
     margin-top: 0.5rem;
     background-color: white;
-    padding: 10px;
-    box-shadow: -2px 5px #b9b9b97a;
-    border-radius: 10px;
   }
-  ion-content {
-    --padding-top: -100px !important;
-    --background: rgb(241, 235, 235) !important;
-  }
-
+  // ion-content {
+  //   --padding-top: -100px !important;
+  //   --background: rgb(241, 235, 235) !important;
+  // }
+.font-top {
+  margin-top: 0px;
+}
 
 .btn-center {
     display: flex;
