@@ -6,8 +6,8 @@ import * as moment from 'moment';
 })
 export class MomentPipe implements PipeTransform {
 
-  transform(date, index): any {
-    return moment(date).locale('th').add(index, 'days').format('DD MMMM YYYY');
+  transform(date, format): any {
+    return moment(date).locale('th').format(format);
   }
 
 }
