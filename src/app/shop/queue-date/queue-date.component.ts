@@ -24,7 +24,7 @@ export class QueueDateComponent implements OnInit {
       date.setDate(date.getDate() + i);
       this.allDate.push(date);
     }
-    console.log(this.allDate);
+    // console.log(this.allDate);
   }
 
   selectDate(i) {

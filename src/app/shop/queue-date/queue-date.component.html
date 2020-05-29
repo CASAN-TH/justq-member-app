@@ -19,5 +19,5 @@
       </ion-card>
     </ion-col>
   </ion-row>
-  <ion-button class="btn-size" expand="full" (click)="dismiss()">ต่อไป</ion-button>
 </ion-content>
+<ion-button class="btn-size" expand="full" (click)="dismiss()" [disabled]="!selected">ต่อไป</ion-button>
