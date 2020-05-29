@@ -38,8 +38,7 @@ export class ShopPage implements OnInit {
     this._location.back();
   }
 
-
-  async openModal(id) {
+  async QueueDetailModal(id) {
     let tel: any;
     const res = await this.shopService.getShopById(id);
     // console.log(res);
@@ -51,6 +50,9 @@ export class ShopPage implements OnInit {
     });
     modal.onDidDismiss().then((result) => {
       tel = result.data
+      if (tel) {
+        this.QueueDateModal()
+      }
       // console.log(result.data);
       // console.log(tel);
       this.saveQueue(tel);
@@ -71,6 +73,29 @@ export class ShopPage implements OnInit {
     // return await modal.present();
   }
 
+  async QueueDateModal() {
+    const modal = await this.modalController.create({
+      component: QueueDateComponent,
+    });
+    modal.onDidDismiss().then((result) => {
+      // console.log(result.data);
+      this.QueueTimeModal()
+    });
+    await modal.present();
+  }
+
+  async QueueTimeModal() {
+    const modal = await this.modalController.create({
+      component: QueueDateComponent,
+      componentProps: {
+        quetime: this.shopData
+      }
+    });
+    modal.onDidDismiss().then((result) => {
+      // console.log(result.data);
+    });
+    await modal.present();
+  }
 
   saveQueue(tel) {
     const body = {
