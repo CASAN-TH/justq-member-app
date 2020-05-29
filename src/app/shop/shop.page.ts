@@ -79,7 +79,7 @@ export class ShopPage implements OnInit {
       component: QueueTimeComponent,
       componentProps: {
         quetime: this.selectedShop,
-        dayNumber: this.queDate.dayNumber
+        dayNumber: this.queDate
       }
     });
     modal.onDidDismiss().then((result) => {

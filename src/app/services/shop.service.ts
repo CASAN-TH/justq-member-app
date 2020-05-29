@@ -44,4 +44,12 @@ export class ShopService {
       }, reject);
     });
   }
+
+  getOpenTime(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.get('../../assets/json/opendaily.json').subscribe((res) => {
+        resolve(res);
+      }, reject);
+    });
+  }
 }
