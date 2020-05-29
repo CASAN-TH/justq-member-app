@@ -10,7 +10,7 @@ export class QueueDetailComponent implements OnInit {
 
   @Input() queueDetail: any;
 
-  phoneNumber: any;
+  phoneNumber = "";
 
   constructor(
     public modalController: ModalController

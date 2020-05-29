@@ -48,8 +48,8 @@ export class ShopPage implements OnInit {
         queueDetail: res
       }
     });
-    modal.onDidDismiss().then((data) => {
-      console.log('The result:', data);
+    modal.onDidDismiss().then((result) => {
+      console.log(result.data);
    });
    await modal.present();
 
