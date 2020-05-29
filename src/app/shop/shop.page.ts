@@ -48,7 +48,10 @@ export class ShopPage implements OnInit {
         queueDetail: res
       }
     });
-    return await modal.present();
+  //   modal.onDismiss(data => {
+  //     console.log('MODAL DATA', data);
+  // });
+    // return await modal.present();
 
     // // const modal = await this.modalController.create({
     // //   component: QueueDateComponent,
