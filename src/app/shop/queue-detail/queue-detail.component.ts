@@ -20,9 +20,10 @@ export class QueueDetailComponent implements OnInit {
     // console.log(this.queueDetail);
   }
 
-  dismiss() {
+  onClose() {
     this.modalController.dismiss();
   }
+  
   saveDismiss() {
     this.modalController.dismiss(this.phoneNumber);
     // console.log(this.phoneNumber);

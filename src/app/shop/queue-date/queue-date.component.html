@@ -1,3 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="start" (click)="onClose()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>เลือกวันที่</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content overflow-scroll="true">
   <ion-row *ngFor="let item of allDate; let i = index">
     <ion-col size="12">
