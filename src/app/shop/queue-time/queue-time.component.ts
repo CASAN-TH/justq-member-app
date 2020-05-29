@@ -15,4 +15,8 @@ export class QueueTimeComponent implements OnInit {
     console.log(this.quetime);
   }
 
+  clickTime(){
+    console.log("click time");
+  }
+
 }

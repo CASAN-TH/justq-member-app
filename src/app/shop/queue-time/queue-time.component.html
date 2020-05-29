@@ -6,7 +6,7 @@
 
 <ion-content>
   <div col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 class="cover-image">
-    <img  class="cover-image-content" src="https://lh3.googleusercontent.com/-gBd-kgbhCb4/XRhBFGUmRHI/AAAAAAAAV2o/IOr_cpxqi1EPZW0LsH8m-7kLo_SB7HWcgCLIBGAYYCw/w1080-h608-p-k-no-v0/">
+    <img  class="cover-image-content" src="https://lh3.googleusercontent.com/proxy/VARuKUJ--bxO2Q0RcqINmLSciQfZywpwY76BrRjL6iN4WamwrM4n5yjK8gqz052Rbx0qvL8usOqKhQFQAIJDKxl41acvTm6KgHtLEJ12nflMnccGDWoAMnMRHmHlA6LdpzEB1mHCzbvHNrzrFQI">
   </div>
 
   <ion-row class="bg-color">
@@ -20,9 +20,17 @@
 
   <ion-row class="ion-text-center">
     <ion-col size="12">
-      <h3>เลือกเวลาที่ต้องการ</h3>
+      <h4>เลือกเวลาที่ต้องการ</h4>
       <p class="txt-warning">จองเเล้วไม่สามารถยกเลิกได้ กรุณาตรวจสอบความถูกต้องก่อนทำการจอง</p>
     </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-text-center">
+
+    <ion-col size="5" class="bg-color" (click)="clickTime()">
+      <h3>08:30 - 17:00</h3>
+    </ion-col>
+
   </ion-row>
 
 </ion-content>
