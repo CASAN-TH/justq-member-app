@@ -26,22 +26,22 @@ export class QueueTimeComponent implements OnInit {
     this.Shopservice.getOpenTime().then((res) => {
       // console.log(res);
       this.openTimeData = res.data;
-      console.log(this.openTimeData);
+      // console.log(this.openTimeData);
     })
-    console.log(this.quetime);
-    console.log(this.dayNumber);
+    // console.log(this.quetime);
+    // console.log(this.dayNumber);
   }
 
   clickTime(item) {
     this.selected = item;
-    console.log(item);
+    // console.log(item);
   }
 
   saveTime(){
     const body = {
       queTime: this.selected
     };
-    console.log(body);
+    // console.log(body);
     this.modalController.dismiss(body);
 
   }

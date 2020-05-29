@@ -29,7 +29,7 @@ export class QueueDateComponent implements OnInit {
 
   selectDate(i) {
     this.selected = i;
-    console.log(this.allDate[this.selected]);
+    // console.log(this.allDate[this.selected]);
   }
 
   onClose() {
@@ -44,7 +44,7 @@ export class QueueDateComponent implements OnInit {
       queDate: this.allDate[this.selected],
       dayNumber: day
     };
-    console.log(body);
+    // console.log(body);
     this.modalController.dismiss(body);
   }
 

@@ -94,19 +94,16 @@ export class ShopPage implements OnInit {
   }
 
   saveQueue() {
-    console.log(this.tel);
-    console.log(this.queDate);
-    console.log(this.queTime.queTime.time);
     const body = {
       "shop": {
-        "shopId": "5ec40efebff4f7000fd30413"
+        "shopId": this.selectedShop._id
       },
       "queStatus": "available",
-      "customerId": "cus-001",
-      "customerName": "นายกอ",
+      "customerId": "",
+      "customerName": "",
       "customerQty": 1,
       "customerTel": this.tel,
-      "queType": "ช่างนัท",
+      "queType": "",
       "queDate": this.queDate.queDate,
       "queTime": this.queTime.queTime.time
     };
