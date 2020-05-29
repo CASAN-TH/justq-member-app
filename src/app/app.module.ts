@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { QueueDetailComponent } from './shop/queue-detail/queue-detail.component';
 import { QueueDateComponent } from './shop/queue-date/queue-date.component';
 import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { QueueTimeComponent } from './shop/queue-time/queue-time.component';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

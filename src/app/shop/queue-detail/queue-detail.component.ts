@@ -10,6 +10,8 @@ export class QueueDetailComponent implements OnInit {
 
   @Input() queueDetail: any;
 
+  phoneNumber = "";
+
   constructor(
     public modalController: ModalController
   ) { }
@@ -20,6 +22,10 @@ export class QueueDetailComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+  saveDismiss() {
+    this.modalController.dismiss(this.phoneNumber);
+    // console.log(this.phoneNumber);
   }
 
 }
