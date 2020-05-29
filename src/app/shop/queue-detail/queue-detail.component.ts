@@ -22,7 +22,7 @@ export class QueueDetailComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss(this.phoneNumber);
-    console.log(this.phoneNumber);
+    // console.log(this.phoneNumber);
   }
 
 }

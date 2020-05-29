@@ -48,10 +48,10 @@ export class ShopPage implements OnInit {
         queueDetail: res
       }
     });
-  //   modal.onDismiss(data => {
-  //     console.log('MODAL DATA', data);
-  // });
-    // return await modal.present();
+    modal.onDidDismiss().then((data) => {
+      console.log('The result:', data);
+   });
+   await modal.present();
 
     // // const modal = await this.modalController.create({
     // //   component: QueueDateComponent,
@@ -60,6 +60,9 @@ export class ShopPage implements OnInit {
 
     // const modal = await this.modalController.create({
     //   component: QueueTimeComponent,
+    //   componentProps : {
+    //     quetime: this.shopData
+    //   }
     // });
     // return await modal.present();
   }
