@@ -40,6 +40,7 @@ export class ShopPage implements OnInit {
 
 
   async openModal(id) {
+    let tel: any;
     const res = await this.shopService.getShopById(id);
     // console.log(res);
     const modal = await this.modalController.create({
@@ -49,9 +50,10 @@ export class ShopPage implements OnInit {
       }
     });
     modal.onDidDismiss().then((result) => {
-      console.log(result.data);
-   });
-   await modal.present();
+      tel = result.data
+      // console.log(result.data);
+    });
+    await modal.present();
 
     // // const modal = await this.modalController.create({
     // //   component: QueueDateComponent,
@@ -65,6 +67,23 @@ export class ShopPage implements OnInit {
     //   }
     // });
     // return await modal.present();
+    this.saveQueue(tel);
+  }
+
+  saveQueue(tel) {
+    const body = {
+      "shop": {
+        "shopId": "5ec40efebff4f7000fd30413"
+      },
+      "queStatus": "available",
+      "customerId": "cus-001",
+      "customerName": "นายกอ",
+      "customerQty": 1,
+      "customerTel": tel,
+      "queType": "ช่างนัท",
+      "queDate": "2020-05-19T16:53:18.246Z",
+      "queTime": "13:00"
+    }
   }
 
 

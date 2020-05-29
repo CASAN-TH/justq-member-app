@@ -35,9 +35,16 @@
         <h3>กรุณากรอกเบอร์โทรศัพท์</h3>
         <h6 class="font-top">(สูงสุดได้ 1 รหัส)</h6>
         <ion-label position="stacked">กรุณากรอกเบอร์โทรศัพท์ 10 หลัก</ion-label>
-        <ion-input [(ngModel)]="phoneNumber"></ion-input>
+        <ion-input maxlength="10" type="text"[(ngModel)]="phoneNumber"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
-
 </ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col padding="10">
+      <ion-button size="medium" expand="block">ต่อไป</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
