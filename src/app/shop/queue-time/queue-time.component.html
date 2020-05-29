@@ -6,12 +6,13 @@
 
 <ion-content>
   <div col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 class="cover-image">
-    <img  class="cover-image-content" src="https://lh3.googleusercontent.com/proxy/VARuKUJ--bxO2Q0RcqINmLSciQfZywpwY76BrRjL6iN4WamwrM4n5yjK8gqz052Rbx0qvL8usOqKhQFQAIJDKxl41acvTm6KgHtLEJ12nflMnccGDWoAMnMRHmHlA6LdpzEB1mHCzbvHNrzrFQI">
+    <img class="cover-image-content"
+      src="https://lh3.googleusercontent.com/proxy/VARuKUJ--bxO2Q0RcqINmLSciQfZywpwY76BrRjL6iN4WamwrM4n5yjK8gqz052Rbx0qvL8usOqKhQFQAIJDKxl41acvTm6KgHtLEJ12nflMnccGDWoAMnMRHmHlA6LdpzEB1mHCzbvHNrzrFQI">
   </div>
 
   <ion-row class="bg-color">
     <ion-col size="6" class="ion-text-start">
-     <h5>{{dayNumber.queDate | moment: "DD MMMM YYYY"}}</h5> 
+      <h5>{{dayNumber.queDate | moment: "DD MMMM YYYY"}}</h5>
     </ion-col>
     <ion-col size="6" class="ion-text-end">
       <h5>จำนวน 1 คน</h5>
@@ -28,13 +29,14 @@
   <div *ngIf="openTimeData">
     <ion-row class="ion-text-center">
 
-      <ion-col size="12" (click)="clickTime()">
+      <ion-col size="12">
         <h3 class="txt-open">{{openTimeData.opendaily}}</h3>
       </ion-col>
-  
+
     </ion-row>
     <ion-row class="ion-text-center">
-      <ion-col size="5" class="bg-color bg-margin" *ngFor="let item of openTimeData.opentime">
+      <ion-col size="5" class="bg-color bg-margin" [ngClass]="{'selected-time': item.que === selected.que}"
+        *ngFor="let item of openTimeData.opentime" (click)="clickTime(item)">
         <h4>
           {{item.time}}
         </h4>
@@ -50,7 +52,7 @@
 <ion-footer>
   <ion-row>
     <ion-col padding="10">
-      <ion-button size="medium" expand="block">ยืนยัน</ion-button>
+      <ion-button size="medium" expand="block" (click)="saveTime()">ยืนยัน</ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>
