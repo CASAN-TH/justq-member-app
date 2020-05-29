@@ -52,6 +52,8 @@ export class ShopPage implements OnInit {
     modal.onDidDismiss().then((result) => {
       tel = result.data
       // console.log(result.data);
+      // console.log(tel);
+      this.saveQueue(tel);
     });
     await modal.present();
 
@@ -67,8 +69,8 @@ export class ShopPage implements OnInit {
     //   }
     // });
     // return await modal.present();
-    this.saveQueue(tel);
   }
+
 
   saveQueue(tel) {
     const body = {
@@ -84,6 +86,8 @@ export class ShopPage implements OnInit {
       "queDate": "2020-05-19T16:53:18.246Z",
       "queTime": "13:00"
     }
+    this.shopService.saveQueue(body)
+    console.log(body);
   }
 
 
