@@ -107,8 +107,8 @@ export class ShopPage implements OnInit {
       "customerQty": 1,
       "customerTel": this.tel,
       "queType": "ช่างนัท",
-      "queDate": "2020-05-19T16:53:18.246Z",
-      "queTime": "13:00"
+      "queDate": this.queDate,
+      "queTime": this.queTime
     };
     this.shopService.saveQueue(body);
     console.log(body);
