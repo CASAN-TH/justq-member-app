@@ -15,6 +15,9 @@ import { QueueTimeComponent } from './queue-time/queue-time.component';
 export class ShopPage implements OnInit {
 
   shopData: any;
+  tel: any;
+  queDate: any;
+  queTime: any;
 
   constructor(
     private _location: Location,
@@ -39,7 +42,6 @@ export class ShopPage implements OnInit {
   }
 
   async QueueDetailModal(id) {
-    let tel: any;
     const res = await this.shopService.getShopById(id);
     // console.log(res);
     const modal = await this.modalController.create({
@@ -49,28 +51,12 @@ export class ShopPage implements OnInit {
       }
     });
     modal.onDidDismiss().then((result) => {
-      tel = result.data
-      if (tel) {
-        this.QueueDateModal()
+      if (result.data) {
+        this.tel = result.data;
+        this.QueueDateModal();
       }
-      // console.log(result.data);
-      // console.log(tel);
-      this.saveQueue(tel);
     });
     await modal.present();
-
-    // // const modal = await this.modalController.create({
-    // //   component: QueueDateComponent,
-    // // });
-    // // return await modal.present();
-
-    // const modal = await this.modalController.create({
-    //   component: QueueTimeComponent,
-    //   componentProps : {
-    //     quetime: this.shopData
-    //   }
-    // });
-    // return await modal.present();
   }
 
   async QueueDateModal() {
@@ -78,26 +64,37 @@ export class ShopPage implements OnInit {
       component: QueueDateComponent,
     });
     modal.onDidDismiss().then((result) => {
-      // console.log(result.data);
-      this.QueueTimeModal()
+      if (result.data) {
+        this.queDate = result.data;
+        this.QueueTimeModal();
+      }
     });
     await modal.present();
   }
 
   async QueueTimeModal() {
     const modal = await this.modalController.create({
-      component: QueueDateComponent,
+      component: QueueTimeComponent,
       componentProps: {
-        quetime: this.shopData
+        quetime: this.shopData,
+        dayNumber: this.queDate.dayNumber
       }
     });
     modal.onDidDismiss().then((result) => {
       // console.log(result.data);
+      if (result.data) {
+        this.queTime = result.data;
+        this.saveQueue();
+      }
+
     });
     await modal.present();
   }
 
-  saveQueue(tel) {
+  saveQueue() {
+    console.log(this.tel);
+    console.log(this.queDate);
+    console.log(this.queTime);
     const body = {
       "shop": {
         "shopId": "5ec40efebff4f7000fd30413"
@@ -106,12 +103,12 @@ export class ShopPage implements OnInit {
       "customerId": "cus-001",
       "customerName": "นายกอ",
       "customerQty": 1,
-      "customerTel": tel,
+      "customerTel": this.tel,
       "queType": "ช่างนัท",
       "queDate": "2020-05-19T16:53:18.246Z",
       "queTime": "13:00"
-    }
-    this.shopService.saveQueue(body)
+    };
+    this.shopService.saveQueue(body);
     console.log(body);
   }
 
