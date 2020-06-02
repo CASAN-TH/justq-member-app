@@ -2,6 +2,7 @@ import { ShopService } from './../services/shop.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { Location } from "@angular/common";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service-type',
@@ -31,7 +32,8 @@ export class ServiceTypePage implements OnInit {
 
   constructor(
     private Shopservice: ShopService,
-    private _location: Location
+    private _location: Location,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -66,6 +68,10 @@ export class ServiceTypePage implements OnInit {
   clickServiceTime(item) {
     this.selectedServiceTime = item;
     // console.log(this.selectedServiceTime);
+  }
+
+  close() {
+    this._location.back();
   }
 
 

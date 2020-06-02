@@ -1,6 +1,6 @@
 :root {
     --ion-safe-area-top: 20px;
-    --ion-safe-area-bottom: 22px;  
+    --ion-safe-area-bottom: 22px;
 }
 
 ion-slides {
@@ -16,8 +16,7 @@ ion-card {
 
 .font-top {
     margin-top: 0px;
-  }
-
+}
 
 .thumbnail-size {
     height: 115px;
@@ -35,7 +34,9 @@ ion-card {
     height: 20px;
 }
 
-
-.selected-time{
+.selected-time {
     background-color: lightgray;
-  }
+}
+.conten-title {
+    padding-bottom: 20px;
+}

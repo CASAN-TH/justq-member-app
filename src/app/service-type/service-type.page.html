@@ -79,7 +79,7 @@
       <ion-footer>
         <ion-row>
           <ion-col padding="10">
-            <ion-button size="medium" expand="block" (click)="nextSlide()">ต่อไป</ion-button>
+            <ion-button size="medium" expand="block" (click)="nextSlide()" [disabled]="10 > phoneNumber.length">ต่อไป</ion-button>
           </ion-col>
         </ion-row>
       </ion-footer>
@@ -97,13 +97,13 @@
                 <h3>รายละเอียดการจอง</h3>
               </ion-label>
             </ion-item>
-            <div>
+            <div class="conten-title">
               <h4>{{ selectedServiceDate.date }}</h4>
               <span>{{ selectedServiceTime.start }}</span> - <span>{{ selectedServiceTime.end }}</span>
             </div>
             <ion-row>
               <ion-col size="6">
-                <ion-button size="medium" expand="block">ยกเลิก</ion-button>
+                <ion-button size="medium" expand="block" (click)="close()">ยกเลิก</ion-button>
               </ion-col>
               <ion-col size="6">
                 <ion-button size="medium" expand="block" (click)="saveQueue()">ยืนยัน</ion-button>
