@@ -1,24 +1,124 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>service-type</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-slides #slides class="slides-container">
-    <ion-slide class="slide-page-one">
-      <ion-row *ngIf="ShopDetailData.servicetype">
-        <ion-col size="12" *ngFor="let item of ShopDetailData.servicetype">
+    <ion-slide>
+      <ion-row>
+        <ion-col size="12" *ngFor="let item of shopServiceTypeData"
+          [ngClass]="{'selected-time': item.code === selectedServiceType.code}" (click)="clickServiceType(item)">
           <h4>
             {{ item.name }}
           </h4>
         </ion-col>
       </ion-row>
-      <!-- <button type="submit" ion-button color="light" class="swiper-button-next swiper-button-black"
-      (click)="nextSlide()"></button> 
-      <button type="submit" ion-button color="light" class="swiper-button-prev swiper-button-black"
-      (click)="prevSlide()"></button> -->
+      <ion-footer>
+        <ion-row>
+          <ion-col padding="10">
+            <ion-button size="medium" expand="block" (click)="nextSlide()">ต่อไป</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
     </ion-slide>
 
+    <ion-slide>
+      <ion-row>
+        <ion-col size="12" *ngFor="let item of shopServiceDateData"
+          [ngClass]="{'selected-time': item.date === selectedServiceDate.date}" (click)="clickServiceDate(item)">
+          <h4>
+            {{ item.date }}
+          </h4>
+        </ion-col>
+      </ion-row>
+      <ion-footer>
+        <ion-row>
+          <ion-col padding="10">
+            <ion-button size="medium" expand="block" (click)="nextSlide()">ต่อไป</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row *ngFor="let serviceType of shopServiceTypeData">
+        <ion-col size="6" *ngFor="let item of serviceType.servicetime"
+          [ngClass]="{'selected-time': item.queue === selectedServiceTime.queue}" (click)="clickServiceTime(item)">
+          <h4>
+            {{ item.start }} {{ item.end }}
+          </h4>
+        </ion-col>
+      </ion-row>
+      <ion-footer>
+        <ion-row>
+          <ion-col padding="10">
+            <ion-button size="medium" expand="block" (click)="nextSlide()">ต่อไป</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <h3>กรุณากรอกเบอร์โทรศัพท์</h3>
+            <h6 class="font-top">(สูงสุดได้ 1 รหัส)</h6>
+            <ion-label position="stacked">กรุณากรอกเบอร์โทรศัพท์ 10 หลัก</ion-label>
+            <ion-input maxlength="10" type="text" [(ngModel)]="phoneNumber"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-footer>
+        <ion-row>
+          <ion-col padding="10">
+            <ion-button size="medium" expand="block" (click)="nextSlide()">ต่อไป</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-item lines="none" class="thumbnail-size">
+              <img class="thumbnail-image" src="https://eskimo-studio.com/wp-content/uploads/2017/09/logo-14.jpg">
+              <ion-label class="thumbnail-label">
+                <!-- <h1>{{queueDetail.name}}</h1> -->
+                <h1>ชื่อร้าน</h1>
+                <h3>รายละเอียดการจอง</h3>
+              </ion-label>
+            </ion-item>
+            <div>
+              <h4>วันที่</h4>
+              <h4>เวลา</h4>
+            </div>
+            <ion-row>
+              <ion-col size="6">
+                <ion-button size="medium" expand="block">ยกเลิก</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button size="medium" expand="block">ยืนยัน</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+        <!-- <ion-footer>
+          <ion-row>
+            <ion-col padding="10">
+              <ion-button size="medium" expand="block" (click)="nextSlide()">กลับสู่หน้าหลัก</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-footer> -->
+      </ion-row>
+    </ion-slide>
   </ion-slides>
 </ion-content>
