@@ -71,7 +71,7 @@ export class ServiceTypePage implements OnInit {
   }
 
   close() {
-    this._location.back();
+    this.router.navigateByUrl("/home");
   }
 
 
