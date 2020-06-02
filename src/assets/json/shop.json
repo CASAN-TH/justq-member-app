@@ -1,0 +1,85 @@
+{
+  "status": 200,
+  "data": {
+    "name": "ร้านละมุนภัณฑ์",
+    "coverimgurl": "shorturl.at/ntvVo",
+    "logoimgurl": "shorturl.at/ntvVZ",
+    "openhours": [
+      {
+        "seq": 1,
+        "dayofweek": "จันทร์",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 2,
+        "dayofweek": "อังคาร",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 3,
+        "dayofweek": "พุธ",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 4,
+        "dayofweek": "พฤหัส",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 5,
+        "dayofweek": "ศุกร์",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 6,
+        "dayofweek": "เสาร์",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      },
+      {
+        "seq": 7,
+        "dayofweek": "อาทิตย์",
+        "opentime": [
+          {
+            "start": "8:30",
+            "end": "18:00"
+          }
+        ]
+      }
+    ],
+    "shoptype": "1",
+    "location": { "lat": 13.940697600000002, "lng": 100.7156125 }
+  },
+  "servicedata":[
+
+  ]
+}

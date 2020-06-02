@@ -13,7 +13,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },  {
+    path: 'service-type',
+    loadChildren: () => import('./service-type/service-type.module').then( m => m.ServiceTypePageModule)
   }
+
 
 ];
 @NgModule({
