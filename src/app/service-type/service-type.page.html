@@ -13,34 +13,41 @@
   <ion-slides #slides class="slides-container">
 
     <ion-slide>
-      <ion-row>
-        <ion-col size="12" *ngFor="let item of shopServiceTypeData"
-          [ngClass]="{'selected-time': item.code === selectedServiceType.code}" (click)="clickServiceType(item)">
-          <h4>
-            {{ item.name }}
-          </h4>
+      <ion-row *ngFor="let item of shopServiceTypeData">
+        <ion-col size="12">
+          <ion-card class="card-space" [ngClass]="{'selected-time': item.code === selectedServiceType.code}"
+            (click)="clickServiceType(item)">
+            <ion-card-content>
+              <div style="font-size: 18px;"> {{ item.name }}</div>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
+
     </ion-slide>
 
     <ion-slide>
-      <ion-row>
-        <ion-col size="12" *ngFor="let item of shopServiceDateData"
-          [ngClass]="{'selected-time': item.date === selectedServiceDate.date}" (click)="clickServiceDate(item)">
-          <h4>
-            {{ item.date }}
-          </h4>
+      <ion-row *ngFor="let item of shopServiceDateData">
+        <ion-col size="12">
+          <ion-card class="card-space" [ngClass]="{'selected-time': item.date === selectedServiceDate.date}"
+            (click)="clickServiceDate(item)">
+            <ion-card-content>
+              <div style="font-size: 18px;">{{ item.date }}</div>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-slide>
 
     <ion-slide>
       <ion-row *ngFor="let serviceType of shopServiceTypeData">
-        <ion-col size="6" *ngFor="let item of serviceType.servicetime"
-          [ngClass]="{'selected-time': item.queue === selectedServiceTime.queue}" (click)="clickServiceTime(item)">
-          <h4>
-            {{ item.start }} {{ item.end }}
-          </h4>
+        <ion-col size="6" *ngFor="let item of serviceType.servicetime">
+          <ion-card class="card-space" [ngClass]="{'selected-time': item.queue === selectedServiceTime.queue}"
+            (click)="clickServiceTime(item)">
+            <ion-card-content>
+              <div style="font-size: 18px;">{{ item.start }} - {{ item.end }}</div>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
 

@@ -94,6 +94,7 @@ export class ServiceTypePage implements OnInit {
     };
     // this.shopService.saveQueue(body);
     console.log(body);
+    this.router.navigateByUrl("/home");
   }
 
   goBackClick() {
