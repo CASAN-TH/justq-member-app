@@ -17,7 +17,8 @@ export class ServiceTypePage implements OnInit {
 
   phoneNumber = "";
   selectedServiceType = {
-    code: ""
+    code: "",
+    name: ""
   };
   selectedServiceDate = {
     date: ""
@@ -42,10 +43,12 @@ export class ServiceTypePage implements OnInit {
     this.clickServiceType(this.selectedServiceType);
     this.clickServiceDate(this.selectedServiceDate)
     this.clickServiceTime(this.selectedServiceTime)
+    this.phoneNumber;
     this.slides.slideNext();
     console.log(this.selectedServiceType);
     console.log(this.selectedServiceDate);
     console.log(this.selectedServiceTime);
+    console.log(this.phoneNumber);
   }
 
 
@@ -61,6 +64,28 @@ export class ServiceTypePage implements OnInit {
   clickServiceTime(item) {
     this.selectedServiceTime = item;
     // console.log(this.selectedServiceTime);
+  }
+
+
+
+  saveQueue() {
+    // console.log(this.selectedServiceType);
+    // console.log(this.selectedServiceDate);
+    // console.log(this.selectedServiceTime);
+    // console.log(this.phoneNumber);
+    const body = {
+      "cusId": "",
+      "shopId": "",
+      "reserveType": {
+        "code": this.selectedServiceType.code,
+        "name": this.selectedServiceType.name
+      },
+      "reserveDate": this.selectedServiceDate,
+      "reserveTime": this.selectedServiceTime,
+      "cusPhone": this.phoneNumber
+    };
+    // this.shopService.saveQueue(body);
+    console.log(body);
   }
 
   goBackClick() {

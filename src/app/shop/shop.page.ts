@@ -115,9 +115,9 @@ export class ShopPage implements OnInit {
 
   async  toServiceTypePage(id) {
     const res = await this.shopService.getShopById(id);
-      // console.log(res);
+    // console.log(res);
     this.selectedShop = res;
-    console.log(this.selectedShop);
+    // this.router.navigateByUrl("/home/shop/" + this.selectedShop);
     this.router.navigateByUrl("/service-type");
   }
 
