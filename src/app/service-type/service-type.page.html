@@ -55,14 +55,15 @@
 
     <ion-slide>
       <ion-row>
-        <ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <h3 class="title-phone">รายละเอียดการจอง</h3>
+            <ion-label position="stacked">กรุณากรอกชื่อผู้จอง</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+          </ion-item>
           <ion-item>
             <ion-label position="stacked">กรุณากรอกเบอร์โทรศัพท์ 10 หลัก</ion-label>
             <ion-input maxlength="10" type="text" [(ngModel)]="phoneNumber"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="stacked">กรุณากรอกชื่อผู้จอง</ion-label>
-            <ion-input type="text" [(ngModel)]="name"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -81,9 +82,10 @@
               </ion-label>
             </ion-item>
             <div class="conten-title">
-              <h4>ชื่อผู้จอง : {{ name }}</h4>
               <h1 class="title-date">{{ selectedServiceDate.date }}</h1>
               <span>{{ selectedServiceTime.start }}</span> - <span>{{ selectedServiceTime.end }}</span>
+              <h4 class="ion-text-center">ชื่อผู้จอง : {{ name }}</h4>
+              <h5 class="ion-text-center">เบอร์โทรศัพท์ : {{ phoneNumber }}</h5>
             </div>
             <ion-row>
               <ion-col size="6">
