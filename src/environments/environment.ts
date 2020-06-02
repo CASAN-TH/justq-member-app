@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://justq-api-gateway-q2qr5uu5pq-de.a.run.app',
+  apiUrl: ' https://q-gateway-4qrrslz5aa-de.a.run.app',
   // apiUrl1: 'http://localhost:3000'
 };
 
