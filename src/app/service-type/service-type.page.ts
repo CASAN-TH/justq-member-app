@@ -21,6 +21,7 @@ export class ServiceTypePage implements OnInit {
     this.Shopservice.getShopDetail().then((res) =>{
       console.log(res);
       this.ShopDetailData = res.data;
+      console.log(this.ShopDetailData.servicetype);
     })
   }
   nextSlide() {
