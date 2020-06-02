@@ -1,3 +1,4 @@
+import { ShopService } from './../services/shop.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {IonSlides} from '@ionic/angular';
 
@@ -10,10 +11,17 @@ export class ServiceTypePage implements OnInit {
 
   @ViewChild('slides') slides: IonSlides;
 
-  constructor() { }
+  ShopDetailData: any;
+
+  constructor(
+    private Shopservice: ShopService
+  ) { }
 
   ngOnInit() {
-
+    this.Shopservice.getShopDetail().then((res) =>{
+      console.log(res);
+      this.ShopDetailData = res.data;
+    })
   }
   nextSlide() {
     this.slides.slideNext();
