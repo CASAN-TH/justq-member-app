@@ -7,8 +7,12 @@
 <ion-content>
   <ion-slides #slides class="slides-container">
     <ion-slide class="slide-page-one">
-      <ion-row>
-        ssssssss
+      <ion-row *ngIf="ShopDetailData.servicetype">
+        <ion-col size="12" *ngFor="let item of ShopDetailData.servicetype">
+          <h4>
+            {{ item.name }}
+          </h4>
+        </ion-col>
       </ion-row>
       <!-- <button type="submit" ion-button color="light" class="swiper-button-next swiper-button-black"
       (click)="nextSlide()"></button> 
