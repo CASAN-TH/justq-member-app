@@ -52,4 +52,12 @@ export class ShopService {
       }, reject);
     });
   }
+
+  getShopDetail(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.get('../../assets/json/shop.json').subscribe((res) => {
+        resolve(res);
+      }, reject);
+    });
+  }
 }
