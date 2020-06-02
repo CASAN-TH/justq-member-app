@@ -24,7 +24,9 @@ export class ServiceTypePage implements OnInit {
     date: ""
   };
   selectedServiceTime = {
-    queue: ""
+    queue: "",
+    start: "",
+    end: ""
   };
 
   constructor(
