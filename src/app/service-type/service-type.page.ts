@@ -39,9 +39,10 @@ export class ServiceTypePage implements OnInit {
 
   ngOnInit() {
     this.Shopservice.getShopDetail().then((res) => {
-      // console.log(res);
-      this.shopServiceTypeData = res.data.servicetype;
-      this.shopServiceDateData = res.data.servicedate;
+      console.log(res);
+      this.shopServiceTypeData = res.data[0].servicetype;
+      this.shopServiceDateData = res.data[0].servicedate;
+      console.log(this.shopServiceDateData);
     })
   }
   nextSlide() {

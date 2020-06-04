@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: ' https://q-gateway-4qrrslz5aa-de.a.run.app',
-  // apiUrl1: 'http://localhost:3000'
+  // apiUrl: ' https://q-gateway-4qrrslz5aa-de.a.run.app',
+  apiUrl: 'http://localhost:3000'
 };
 
 /*

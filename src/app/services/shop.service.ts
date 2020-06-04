@@ -23,7 +23,7 @@ export class ShopService {
 
   getShopById(id): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.get(URL2 + id).subscribe((res: any) => {
+      this.http.get(URL2 + id,{ headers: this.authorizationHeader() }).subscribe((res: any) => {
         resolve(res.data);
       }, reject);
     });
@@ -37,25 +37,25 @@ export class ShopService {
     });
   }
 
-  getShopByType(shopType): Promise<any> {
+  getShopByType(shoptype): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(URL, { shoptype: shopType }).subscribe((res) => {
+      this.http.post(URL, { shoptype: shoptype },{ headers: this.authorizationHeader() }).subscribe((res) => {
         resolve(res);
       }, reject);
     });
   }
 
-  getOpenTime(): Promise<any> {
-    return new Promise((resolve, reject) => {
-      this.http.get('../../assets/json/opendaily.json').subscribe((res) => {
-        resolve(res);
-      }, reject);
-    });
-  }
+  // getOpenTime(): Promise<any> {
+  //   return new Promise((resolve, reject) => {
+  //     this.http.get('../../assets/json/opendaily.json').subscribe((res) => {
+  //       resolve(res);
+  //     }, reject);
+  //   });
+  // }
 
   getShopDetail(): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.get('../../assets/json/shop.json').subscribe((res) => {
+      this.http.get(URL2,{ headers: this.authorizationHeader() }).subscribe((res) => {
         resolve(res);
       }, reject);
     });

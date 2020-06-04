@@ -29,12 +29,13 @@ export class ShopPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // console.log(this.route.snapshot.params.id);
-    let shopType = this.route.snapshot.params.id;
+    console.log(this.route.snapshot.params.id);
+    let shoptype = this.route.snapshot.params.id;
 
-    this.shopService.getShopByType(shopType).then((res: any) => {
+    this.shopService.getShopByType(shoptype).then((res: any) => {
       // console.log(res);
       this.shopData = res.data;
+      console.log(this.shopData);
     })
 
   }
@@ -115,7 +116,7 @@ export class ShopPage implements OnInit {
 
   async  toServiceTypePage(id) {
     const res = await this.shopService.getShopById(id);
-    // console.log(res);
+    console.log(res);
     this.selectedShop = res;
     // this.router.navigateByUrl("/home/shop/" + this.selectedShop);
     this.router.navigateByUrl("/service-type");

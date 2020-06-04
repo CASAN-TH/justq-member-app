@@ -16,7 +16,7 @@
 
 <ion-row>
   <ion-col size="6" *ngFor="let type of shopTypeData">
-    <ion-card class="ion-text-center card-margin" (click)="goToShopByType(type.shoptype)">  
+    <ion-card class="ion-text-center card-margin" (click)="goToShopByType(type.shopType)">  
       <ion-card-content>
        <img class="type-logo" [src]="type.shopTypeImg">
         <h2>{{type.shopTypeName}}</h2>

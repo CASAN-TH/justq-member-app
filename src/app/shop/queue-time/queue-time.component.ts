@@ -23,11 +23,11 @@ export class QueueTimeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.Shopservice.getOpenTime().then((res) => {
-      // console.log(res);
-      this.openTimeData = res.data;
-      // console.log(this.openTimeData);
-    })
+    // this.Shopservice.getOpenTime().then((res) => {
+    //   // console.log(res);
+    //   this.openTimeData = res.data;
+    //   // console.log(this.openTimeData);
+    // })
     // console.log(this.quetime);
     // console.log(this.dayNumber);
   }
