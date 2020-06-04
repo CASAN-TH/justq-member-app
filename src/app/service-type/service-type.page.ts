@@ -51,6 +51,7 @@ export class ServiceTypePage implements OnInit {
     // console.log(this.paramsId);
     this.selectedShop = res;
     this.shopServiceTypeData = this.selectedShop.servicetype;
+    this.shopServiceDateData = this.selectedShop.servicedate;
 
 
     // const res = await this.Shopservice.getShopById("5ed8c5c46015e72734dcdecf");
@@ -72,11 +73,11 @@ export class ServiceTypePage implements OnInit {
     this.phoneNumber;
     this.cusname;
     this.slides.slideNext();
-    // console.log(this.selectedServiceType);
-    // console.log(this.selectedServiceDate);
-    // console.log(this.selectedServiceTime);
-    // console.log(this.phoneNumber);
-    // console.log(this.cusname);
+    console.log(this.selectedServiceType);
+    console.log(this.selectedServiceDate);
+    console.log(this.selectedServiceTime);
+    console.log(this.phoneNumber);
+    console.log(this.cusname);
   }
 
 
