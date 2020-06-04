@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.HomeService.getShopType().then((res) =>{
-      console.log(res);
+      // console.log(res);
       this.shopTypeData = res.data[0].shoptype;
       console.log(this.shopTypeData);
     })
@@ -26,7 +26,7 @@ export class HomePage implements OnInit {
   }
 
   goToShopByType(shopType){
-    console.log(shopType);
+    // console.log(shopType);
     this.router.navigateByUrl("/home/shop/" + shopType);
   }
 

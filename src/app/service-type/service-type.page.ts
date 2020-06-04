@@ -2,7 +2,7 @@ import { ShopService } from './../services/shop.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { Location } from "@angular/common";
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-service-type',
@@ -17,7 +17,7 @@ export class ServiceTypePage implements OnInit {
   shopServiceDateData: any;
 
   phoneNumber = "";
-  name = "";
+  cusname = "";
   selectedServiceType = {
     code: "",
     name: ""
@@ -31,32 +31,52 @@ export class ServiceTypePage implements OnInit {
     end: ""
   };
 
+  selectedShop: any;
+  paramsId: any;
+
   constructor(
     private Shopservice: ShopService,
     private _location: Location,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
-  ngOnInit() {
-    this.Shopservice.getShopDetail().then((res) => {
-      console.log(res);
-      this.shopServiceTypeData = res.data[0].servicetype;
-      this.shopServiceDateData = res.data[0].servicedate;
-      console.log(this.shopServiceDateData);
-    })
+  async  ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      // console.log(params['idUser']);
+      this.paramsId = params['ShopId']
+      console.log(this.paramsId);
+    });
+    const res = await this.Shopservice.getShopById(this.paramsId);
+    // console.log(this.paramsId);
+    this.selectedShop = res;
+    this.shopServiceTypeData = this.selectedShop.servicetype;
+
+
+    // const res = await this.Shopservice.getShopById("5ed8c5c46015e72734dcdecf");
+    // this.selectedShop = res;
+    // console.log(this.selectedShop);
+
+    // this.Shopservice.getShopDetail().then((res) => {
+    //   this.shopServiceTypeData = this.selectedShop.servicetype;
+    //   // this.shopServiceTypeData = res.data[0].servicetype;
+    //   // this.shopServiceDateData = res.data[0].servicedate;
+    //   // console.log(this.shopServiceDateData);
+    // })
   }
+
   nextSlide() {
     this.clickServiceType(this.selectedServiceType);
     this.clickServiceDate(this.selectedServiceDate)
     this.clickServiceTime(this.selectedServiceTime)
     this.phoneNumber;
-    this.name;
+    this.cusname;
     this.slides.slideNext();
-    console.log(this.selectedServiceType);
-    console.log(this.selectedServiceDate);
-    console.log(this.selectedServiceTime);
-    console.log(this.phoneNumber);
-    console.log(this.name);
+    // console.log(this.selectedServiceType);
+    // console.log(this.selectedServiceDate);
+    // console.log(this.selectedServiceTime);
+    // console.log(this.phoneNumber);
+    // console.log(this.cusname);
   }
 
 
@@ -96,10 +116,10 @@ export class ServiceTypePage implements OnInit {
       "reserveDate": this.selectedServiceDate,
       "reserveTime": this.selectedServiceTime,
       "cusPhone": this.phoneNumber,
-      "cusName": this.name
+      "cusName": this.cusname
     };
-    // this.shopService.saveQueue(body);
-    console.log(body);
+    this.Shopservice.saveQueue(body);
+    // console.log(body);
     this.router.navigateByUrl("/home");
   }
 

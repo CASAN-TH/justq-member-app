@@ -37,9 +37,9 @@ export class ShopService {
     });
   }
 
-  getShopByType(shoptype): Promise<any> {
+  getShopByType(shopType): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(URL, { shoptype: shoptype },{ headers: this.authorizationHeader() }).subscribe((res) => {
+      this.http.post(URL, { shoptype: shopType },{ headers: this.authorizationHeader() }).subscribe((res) => {
         resolve(res);
       }, reject);
     });

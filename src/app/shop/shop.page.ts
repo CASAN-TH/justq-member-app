@@ -22,17 +22,17 @@ export class ShopPage implements OnInit {
 
   constructor(
     private _location: Location,
-    private shopService: ShopService,
+    private Shopservice: ShopService,
     private route: ActivatedRoute,
     public modalController: ModalController,
     private router: Router
   ) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params.id);
-    let shoptype = this.route.snapshot.params.id;
+    // console.log(this.route.snapshot.params.id);
+    let shopType = this.route.snapshot.params.id;
 
-    this.shopService.getShopByType(shoptype).then((res: any) => {
+    this.Shopservice.getShopByType(shopType).then((res: any) => {
       // console.log(res);
       this.shopData = res.data;
       console.log(this.shopData);
@@ -45,7 +45,7 @@ export class ShopPage implements OnInit {
   }
 
   // async QueueDetailModal(id) {
-  //   const res = await this.shopService.getShopById(id);
+  //   const res = await this.Shopservice.getShopById(id);
   //   // console.log(res);
   //   this.selectedShop = res;
   //   const modal = await this.modalController.create({
@@ -109,17 +109,17 @@ export class ShopPage implements OnInit {
   //     "queDate": this.queDate.queDate,
   //     "queTime": this.queTime.queTime.time
   //   };
-  //   this.shopService.saveQueue(body);
+  //   this.Shopservice.saveQueue(body);
   //   console.log(body);
   // }
 
 
   async  toServiceTypePage(id) {
-    const res = await this.shopService.getShopById(id);
-    console.log(res);
+    const res = await this.Shopservice.getShopById(id);
+    // console.log(res);
     this.selectedShop = res;
-    // this.router.navigateByUrl("/home/shop/" + this.selectedShop);
-    this.router.navigateByUrl("/service-type");
+    // this.router.navigateByUrl("/service-type");
+    this.router.navigate(['/service-type'], {queryParams: {ShopId: id}});
   }
 
 
