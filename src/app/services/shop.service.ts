@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 const URL = environment.apiUrl + '/api/shopsbytype';
 const URL2 = environment.apiUrl + '/api/shops/';
 const URL3 = environment.apiUrl + '/api/reservations';
+const URL4 = environment.apiUrl + '/api/checkreservations';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,14 @@ export class ShopService {
   getShopByType(shopType): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(URL, { shoptype: shopType },{ headers: this.authorizationHeader() }).subscribe((res) => {
+        resolve(res);
+      }, reject);
+    });
+  }
+
+  getReservetionShopId(shopId): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.post(URL4, { shopId: shopId },{ headers: this.authorizationHeader() }).subscribe((res) => {
         resolve(res);
       }, reject);
     });

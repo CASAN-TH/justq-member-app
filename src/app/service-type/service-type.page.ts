@@ -16,12 +16,18 @@ export class ServiceTypePage implements OnInit {
   shopServiceTypeData: any;
   shopServiceDateData: any;
   shopName: any;
+  logoimgShop: any;
+  selectedShop: any;
+  paramsId: any;
+  shopIdData: any;
 
   phoneNumber = "";
   cusname = "";
+
   selectedServiceType = {
     code: "",
-    name: ""
+    name: "",
+    servicetime: []
   };
   selectedServiceDate = {
     date: ""
@@ -32,8 +38,6 @@ export class ServiceTypePage implements OnInit {
     end: ""
   };
 
-  selectedShop: any;
-  paramsId: any;
 
   constructor(
     private Shopservice: ShopService,
@@ -44,21 +48,22 @@ export class ServiceTypePage implements OnInit {
 
   async  ngOnInit() {
     this.route.queryParams.subscribe((params) => {
-      // console.log(params['idUser']);
       this.paramsId = params['ShopId']
-      console.log(this.paramsId);
+      // console.log(this.paramsId);
     });
     const res = await this.Shopservice.getShopById(this.paramsId);
-    // console.log(this.paramsId);
     this.selectedShop = res;
-    console.log(this.selectedShop.name);
+    // console.log(this.selectedShop);
+    this.logoimgShop = this.selectedShop.logoimgurl;
+    // console.log(this.logoimgShop);
     this.shopName = this.selectedShop.name;
     this.shopServiceTypeData = this.selectedShop.servicetype;
     this.shopServiceDateData = this.selectedShop.servicedate;
 
-    // const res = await this.Shopservice.getShopById("5ed8c5c46015e72734dcdecf");
-    // this.selectedShop = res;
-    // console.log(this.selectedShop);
+    this.Shopservice.getReservetionShopId(this.paramsId).then((res: any) => {
+      this.shopIdData = res.data;
+      console.log(this.shopIdData);
+    })
   }
 
   nextSlide() {
@@ -76,10 +81,9 @@ export class ServiceTypePage implements OnInit {
   }
 
 
-
   clickServiceType(item) {
     this.selectedServiceType = item;
-    // console.log(this.selectedServiceType);
+    // console.log(this.selectedServiceType.servicetime);
   }
   clickServiceDate(item) {
     this.selectedServiceDate = item;
@@ -115,7 +119,7 @@ export class ServiceTypePage implements OnInit {
       "cusName": this.cusname
     };
     this.Shopservice.saveQueue(body);
-    // console.log(body);
+    console.log(body);
     this.router.navigateByUrl("/home");
   }
 
