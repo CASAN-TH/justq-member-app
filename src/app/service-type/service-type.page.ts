@@ -15,6 +15,7 @@ export class ServiceTypePage implements OnInit {
 
   shopServiceTypeData: any;
   shopServiceDateData: any;
+  shopName: any;
 
   phoneNumber = "";
   cusname = "";
@@ -50,20 +51,14 @@ export class ServiceTypePage implements OnInit {
     const res = await this.Shopservice.getShopById(this.paramsId);
     // console.log(this.paramsId);
     this.selectedShop = res;
+    console.log(this.selectedShop.name);
+    this.shopName = this.selectedShop.name;
     this.shopServiceTypeData = this.selectedShop.servicetype;
     this.shopServiceDateData = this.selectedShop.servicedate;
-
 
     // const res = await this.Shopservice.getShopById("5ed8c5c46015e72734dcdecf");
     // this.selectedShop = res;
     // console.log(this.selectedShop);
-
-    // this.Shopservice.getShopDetail().then((res) => {
-    //   this.shopServiceTypeData = this.selectedShop.servicetype;
-    //   // this.shopServiceTypeData = res.data[0].servicetype;
-    //   // this.shopServiceDateData = res.data[0].servicedate;
-    //   // console.log(this.shopServiceDateData);
-    // })
   }
 
   nextSlide() {
@@ -109,7 +104,7 @@ export class ServiceTypePage implements OnInit {
     // console.log(this.name);
     const body = {
       "cusId": "",
-      "shopId": "",
+      "shopId": this.paramsId,
       "reserveType": {
         "code": this.selectedServiceType.code,
         "name": this.selectedServiceType.name
