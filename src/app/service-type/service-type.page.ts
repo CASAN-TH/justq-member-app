@@ -60,24 +60,37 @@ export class ServiceTypePage implements OnInit {
     this.shopServiceTypeData = this.selectedShop.servicetype;
     this.shopServiceDateData = this.selectedShop.servicedate;
 
-    this.Shopservice.getReservetionShopId(this.paramsId).then((res: any) => {
+    // this.Shopservice.getReservetionShopId(this.paramsId, this.selectedServiceType, this.selectedServiceDate.date).then((res: any) => {
+    //   this.shopIdData = res.data;
+    //   console.log(this.selectedServiceType);
+    // })
+    
+  }
+  loadReservetion() {
+    // console.log(this.paramsId);
+    this.Shopservice.getReservetionShopId(this.paramsId, this.selectedServiceType.code, this.selectedServiceDate.date).then((res: any) => {
       this.shopIdData = res.data;
+      console.log(this.paramsId);
+      console.log(this.selectedServiceType.code);
+      console.log(this.selectedServiceDate.date);
       console.log(this.shopIdData);
     })
   }
 
+
   nextSlide() {
     this.clickServiceType(this.selectedServiceType);
     this.clickServiceDate(this.selectedServiceDate)
+    this.loadReservetion()
     this.clickServiceTime(this.selectedServiceTime)
     this.phoneNumber;
     this.cusname;
     this.slides.slideNext();
-    console.log(this.selectedServiceType);
-    console.log(this.selectedServiceDate);
-    console.log(this.selectedServiceTime);
-    console.log(this.phoneNumber);
-    console.log(this.cusname);
+    // console.log(this.selectedServiceType);
+    // console.log(this.selectedServiceDate);
+    // console.log(this.selectedServiceTime);
+    // console.log(this.phoneNumber);
+    // console.log(this.cusname);
   }
 
 
