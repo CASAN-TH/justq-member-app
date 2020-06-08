@@ -59,12 +59,6 @@ export class ServiceTypePage implements OnInit {
     this.shopName = this.selectedShop.name;
     this.shopServiceTypeData = this.selectedShop.servicetype;
     this.shopServiceDateData = this.selectedShop.servicedate;
-
-    // this.Shopservice.getReservetionShopId(this.paramsId, this.selectedServiceType, this.selectedServiceDate.date).then((res: any) => {
-    //   this.shopIdData = res.data;
-    //   console.log(this.selectedServiceType);
-    // })
-    
   }
   loadReservetion() {
     // console.log(this.paramsId);
@@ -86,11 +80,6 @@ export class ServiceTypePage implements OnInit {
     this.phoneNumber;
     this.cusname;
     this.slides.slideNext();
-    // console.log(this.selectedServiceType);
-    // console.log(this.selectedServiceDate);
-    // console.log(this.selectedServiceTime);
-    // console.log(this.phoneNumber);
-    // console.log(this.cusname);
   }
 
 
@@ -114,11 +103,6 @@ export class ServiceTypePage implements OnInit {
 
 
   saveQueue() {
-    // console.log(this.selectedServiceType);
-    // console.log(this.selectedServiceDate);
-    // console.log(this.selectedServiceTime);
-    // console.log(this.phoneNumber);
-    // console.log(this.name);
     const body = {
       "cusId": "",
       "shopId": this.paramsId,
@@ -132,7 +116,7 @@ export class ServiceTypePage implements OnInit {
       "cusName": this.cusname
     };
     this.Shopservice.saveQueue(body);
-    console.log(body);
+    // console.log(body);
     this.router.navigateByUrl("/home");
   }
 
