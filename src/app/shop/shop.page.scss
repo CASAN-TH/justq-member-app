@@ -1,44 +1,42 @@
-
 .thumbnail-size {
-    height: 115px;
+  height: 115px;
 }
 .thumbnail-image {
-    height: 112px;
-    width: 30%;
+  padding-top: 10px;
+  height: 112px;
+  width: 30%;
 }
 .thumbnail-label {
-    padding-bottom: 30px;
-    margin-top: 0px;
-    padding-left: 10px;
+  padding-bottom: 30px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
 .icon-image {
-    height: 20px;
+  height: 20px;
 }
 
-
 ion-grid {
-    margin-top: 0.5rem;
-    background-color: white;
-    padding: 10px;
-    box-shadow: -2px 5px #b9b9b97a;
-    border-radius: 10px;
-  }
-  ion-content {
-    --padding-top: -100px !important;
-    --background: rgb(241, 235, 235) !important;
-  }
-
+  margin-top: 0.5rem;
+  background-color: white;
+  padding: 10px;
+  box-shadow: -2px 5px #b9b9b97a;
+  border-radius: 10px;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
 
 .btn-center {
-    display: flex;
-    justify-content: center;
-    height: 40px;
-  }
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
 
-  .btn-color {
-    color: rgb(0, 0, 0);
-  }
+.btn-color {
+  color: rgb(0, 0, 0);
+}
 
-  .btn-background{
-    background-color: rgb(247, 120, 2);
-  }
+.btn-background {
+  background-color: rgb(247, 120, 2);
+}

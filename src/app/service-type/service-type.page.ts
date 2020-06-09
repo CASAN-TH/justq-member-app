@@ -70,21 +70,11 @@ export class ServiceTypePage implements OnInit {
   }
 
   checkTimeQueue(queue) {
-    // this.shopIdData.forEach((data) => {
-    //   if (queue === data.reserveTime.queue) {
-    //     console.log(queue);
-    //     console.log(data.reserveTime.queue);
-    //     return true;
-    //   }
-    // })
-
     for (let i = 0; i < this.shopIdData.length; i++) {
       if (queue === this.shopIdData[i].reserveTime.queue) {
         return true;
       }
     }
-
-
   }
 
 
