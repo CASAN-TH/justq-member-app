@@ -64,9 +64,10 @@ export class ServiceTypePage implements OnInit {
     // console.log(this.paramsId);
     this.Shopservice.getReservetionShopId(this.paramsId, this.selectedServiceType.code, this.selectedServiceDate.date).then((res: any) => {
       this.shopIdData = res.data;
-      console.log(this.paramsId);
-      console.log(this.selectedServiceType.code);
-      console.log(this.selectedServiceDate.date);
+      // console.log(this.paramsId);
+      // console.log(this.selectedServiceType.code);
+      // console.log(this.selectedServiceDate.date);
+      // console.log(this.shopIdData.reserveTime.queue);
       console.log(this.shopIdData);
     })
   }
