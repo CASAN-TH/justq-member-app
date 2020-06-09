@@ -59,17 +59,32 @@ export class ServiceTypePage implements OnInit {
     this.shopName = this.selectedShop.name;
     this.shopServiceTypeData = this.selectedShop.servicetype;
     this.shopServiceDateData = this.selectedShop.servicedate;
+
+    this.loadReservetion()
   }
+
   loadReservetion() {
-    // console.log(this.paramsId);
     this.Shopservice.getReservetionShopId(this.paramsId, this.selectedServiceType.code, this.selectedServiceDate.date).then((res: any) => {
       this.shopIdData = res.data;
-      // console.log(this.paramsId);
-      // console.log(this.selectedServiceType.code);
-      // console.log(this.selectedServiceDate.date);
-      // console.log(this.shopIdData.reserveTime.queue);
-      console.log(this.shopIdData);
     })
+  }
+
+  checkTimeQueue(queue) {
+    // this.shopIdData.forEach((data) => {
+    //   if (queue === data.reserveTime.queue) {
+    //     console.log(queue);
+    //     console.log(data.reserveTime.queue);
+    //     return true;
+    //   }
+    // })
+
+    for (let i = 0; i < this.shopIdData.length; i++) {
+      if (queue === this.shopIdData[i].reserveTime.queue) {
+        return true;
+      }
+    }
+
+
   }
 
 
