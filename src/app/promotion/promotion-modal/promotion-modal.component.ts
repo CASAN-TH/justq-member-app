@@ -15,7 +15,7 @@ export class PromotionModalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.promotionDataModal);
+    // console.log(this.promotionDataModal);
   }
 
   onClose() {
