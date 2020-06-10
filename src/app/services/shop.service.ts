@@ -6,6 +6,7 @@ const URL = environment.apiUrl + '/api/shopsbytype';
 const URL2 = environment.apiUrl + '/api/shops/';
 const URL3 = environment.apiUrl + '/api/reservations';
 const URL4 = environment.apiUrl + '/api/checkreservations';
+const URL5 = environment.apiUrl + '/api/promotioms';
 
 @Injectable({
   providedIn: 'root'
@@ -65,6 +66,14 @@ export class ShopService {
   getShopDetail(): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.get(URL2, { headers: this.authorizationHeader() }).subscribe((res) => {
+        resolve(res);
+      }, reject);
+    });
+  }
+
+  getPromotion(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.get(URL5, { headers: this.authorizationHeader() }).subscribe((res) => {
         resolve(res);
       }, reject);
     });
