@@ -1,31 +1,31 @@
-.cover-image-content{
-    width: 100%;
-  }
-  
-  .cover-image{
-    height: 170px;
-    overflow: hidden;
-  }
+.cover-image-content {
+  height: 100%;
+  width: 100%;
+}
 
-  .bg-color{
-    background-color: rgb(241, 241, 241);
-  }
+.cover-image {
+  height: 35%;
+  overflow: hidden;
+}
 
-  .txt-warning{
-    margin-top: -7px;
-    color: red;
+.bg-color {
+  background-color: rgb(241, 241, 241);
+}
 
-  }
+.txt-warning {
+  margin-top: -7px;
+  color: red;
+}
 
-  .bg-margin{
-    margin-left: 23px;
-    margin-bottom: 10px;
-  }
+.bg-margin {
+  margin-left: 23px;
+  margin-bottom: 10px;
+}
 
-  .txt-open{
-    margin-top: -12px;
-  }
+.txt-open {
+  margin-top: -12px;
+}
 
-  .selected-time{
-    background-color: lightgray;
-  }
+.selected-time {
+  background-color: lightgray;
+}

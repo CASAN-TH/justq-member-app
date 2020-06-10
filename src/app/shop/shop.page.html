@@ -14,11 +14,8 @@
   <ion-row *ngFor="let item of shopData">
     <ion-col size="12">
       <ion-grid>
-        <ion-item lines="none" class="thumbnail-size" (click)="toServiceTypePage(item._id)">
+        <ion-item lines="none" class="thumbnail-size" (click)="QueueDetailModal(item._id)">
           <img class="thumbnail-image" [src]="item.logoimgurl">
-          <!-- <ion-thumbnail slot="start" class="thumbnail-image">
-            <img src="https://eskimo-studio.com/wp-content/uploads/2017/09/logo-14.jpg">
-          </ion-thumbnail> -->
           <ion-label class="thumbnail-label">
             <h1>{{item.name}}</h1>
             <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
@@ -28,6 +25,18 @@
           </ion-label>
         </ion-item>
       </ion-grid>
+      <!-- <ion-grid>
+        <ion-item lines="none" class="thumbnail-size" (click)="toServiceTypePage(item._id)">
+          <img class="thumbnail-image" [src]="item.logoimgurl">
+          <ion-label class="thumbnail-label">
+            <h1>{{item.name}}</h1>
+            <img class="icon-image" src="https://image.flaticon.com/icons/svg/447/447031.svg">
+            <span>
+              กรุงเทพ(mock)
+            </span>
+          </ion-label>
+        </ion-item>
+      </ion-grid> -->
     </ion-col>
   </ion-row>
 

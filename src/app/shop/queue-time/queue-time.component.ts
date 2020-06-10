@@ -11,6 +11,7 @@ export class QueueTimeComponent implements OnInit {
 
   @Input() quetime: any;
   @Input() dayNumber: any;
+  @Input() queueDetail: any;
 
   openTimeData: any;
   selected = {
@@ -23,13 +24,14 @@ export class QueueTimeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.Shopservice.getOpenTime().then((res) => {
-    //   // console.log(res);
-    //   this.openTimeData = res.data;
-    //   // console.log(this.openTimeData);
-    // })
+    this.Shopservice.getOpenTime().then((res) => {
+      // console.log(res);
+      this.openTimeData = res.data;
+      // console.log(this.openTimeData);
+    })
     // console.log(this.quetime);
     // console.log(this.dayNumber);
+    console.log(this.queueDetail);
   }
 
   clickTime(item) {

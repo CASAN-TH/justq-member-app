@@ -17,7 +17,7 @@ export class QueueDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // console.log(this.queueDetail);
+    console.log(this.queueDetail);
   }
 
   onClose() {

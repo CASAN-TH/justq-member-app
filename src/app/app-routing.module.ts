@@ -16,6 +16,10 @@ const routes: Routes = [
   },  {
     path: 'service-type',
     loadChildren: () => import('./service-type/service-type.module').then( m => m.ServiceTypePageModule)
+  },
+  {
+    path: 'promotion',
+    loadChildren: () => import('./promotion/promotion.module').then( m => m.PromotionPageModule)
   }
 
 
