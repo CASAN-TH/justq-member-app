@@ -5,5 +5,14 @@
 </ion-header>
 
 <ion-content>
-<button (click)="PromotionModal()">ssssssssssssss</button>
+
+  <ion-card *ngFor="let item of promotionData" (click)="PromotionModal(item._id)">
+    <img class="img-size" [src]="item.coverImg">
+    <ion-card-header>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ item.detail }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

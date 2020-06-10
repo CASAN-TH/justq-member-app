@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Location } from "@angular/common";
 import { ModalController } from '@ionic/angular';
 
@@ -8,13 +8,15 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./promotion-modal.component.scss'],
 })
 export class PromotionModalComponent implements OnInit {
-
+  @Input() promotionDataModal: any;
   constructor(
     private _location: Location,
     public modalController: ModalController
-    ) { }
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log(this.promotionDataModal);
+  }
 
   onClose() {
     this.modalController.dismiss();
