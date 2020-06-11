@@ -20,14 +20,13 @@ export class PromotionPage implements OnInit {
 
   ngOnInit() {
     this.Shopservice.getPromotion().then((res: any) => {
-      // console.log(res.data);
+      console.log(res.data);
       this.promotionData = res.data;
     })
   }
 
   async PromotionModal(id) {
     const res = await this.Shopservice.getPromotionById(id);
-    // console.log(res);
     this.promotionDataById = res.data;
     const modal = await this.modalController.create({
       component: PromotionModalComponent,

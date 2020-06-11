@@ -8,14 +8,23 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./promotion-modal.component.scss'],
 })
 export class PromotionModalComponent implements OnInit {
+
   @Input() promotionDataModal: any;
+  contactLink: any;
+
   constructor(
     private _location: Location,
     public modalController: ModalController
   ) { }
 
   ngOnInit() {
-    // console.log(this.promotionDataModal);
+    this.clickLinkUrl();
+  }
+
+  clickLinkUrl() {
+    this.promotionDataModal.links.forEach(link => {
+      return this.contactLink = link.linkUrl;
+    });
   }
 
   onClose() {

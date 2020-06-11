@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content>
-
   <ion-card *ngFor="let item of promotionData" (click)="PromotionModal(item._id)">
     <img class="img-size" [src]="item.coverImg">
     <ion-card-header>
